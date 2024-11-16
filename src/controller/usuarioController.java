@@ -1,5 +1,5 @@
 
-package controller;
+/*package controller;
 
 import DAO.usuarioDAO;
 import DAO.Conexao;
@@ -32,4 +32,4 @@ public class usuarioController {
         }catch(SQLException e){
             JOptionPane.showMessageDialog(view, "Senha não atualizada!", "ERRO", JOptionPane.ERROR_MESSAGE);       
     }
-}
+}*/

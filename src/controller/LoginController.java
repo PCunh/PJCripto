@@ -1,6 +1,7 @@
 
 package controller;
 
+//Import's nescessários chamados de outras files e do banco de dados
 import modell.Usuario;
 import javax.swing.JOptionPane;
 import view.Login;
@@ -11,22 +12,15 @@ import DAO.usuarioDAO;
 import DAO.Conexao;
 import view.Menu;
 
-
+//Classe pública com argumento privado view
 public class LoginController {
     private Login view;
     
-    /**
-     *
-     * @param view
-     */
+    //Construtor parametrizado
     public LoginController(Login view){
         this.view = view;
     }
-
-//    public LoginController(Login aThis) {
-//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-    
+ 
     public void loginUsuario(){
         Usuario usuario = new Usuario(null, view.getTxtcpf().getText(), view.getTxtsenha().getText());
         Conexao conexao = new Conexao();
@@ -49,5 +43,5 @@ public class LoginController {
             JOptionPane.showMessageDialog(view, "Erro de conexão", "ERRO", JOptionPane.ERROR_MESSAGE);
         }
     }
-    }
+    
 }
